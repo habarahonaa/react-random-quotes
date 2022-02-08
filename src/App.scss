@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500");
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  vertical-align: baseline;
+}
+
+$primary-font: "Raleway", sans-serif;
+
+body {
+  color: #20681d;
+  font-family: $primary-font;
+}
+
+.wrapper {
+  background: #20681d;
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 100vh;
+}
+
+.card {
+  align-self: center;
+  background: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 20vh;
+  max-width: 90vw;
+  padding: 2rem;
+  width: 100%;
+  justify-self: center;
+
+  @media (min-width: 960px) {
+    min-height: 32vh;
+    max-width: 576px;
+  }
+
+  .card__text {
+    min-height: 160px;
+
+    blockquote {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      min-height: 160px;
+    }
+  }
+
+  .card__text--quote {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .card__text--author {
+    font-size: 1.1rem;
+    font-style: italic;
+    max-width: 93%;
+    text-align: right;
+  }
+
+  .card__footer {
+    display: flex;
+
+    button {
+      background: #20681d;
+      border: none;
+      border-radius: 5px;
+      height: 40px;
+      margin-right: 15px;
+      width: 40px;
+
+      .icon {
+        color: white;
+        font-size: 1.2rem;
+      }
+    }
+
+    #new-quote {
+      color: white;
+      font-size: 0.8rem;
+      margin-left: auto;
+      width: 100px;
+    }
+  }
+}
